@@ -1,0 +1,235 @@
+*{
+   margin: 0;
+   --backColor:#D6EEEE ;
+   --trans:0.4s ease-in-out;
+   --transLink:0.5s ease-in-out;
+   --footerFont: 0.9rem;
+   --headerColor:#707589; 
+}
+
+/*------------------header------------------------*/
+.header{
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  height: 5.5rem;
+  background: #ebecef;
+}
+.header p{
+font-family: 'Yanone Kaffeesatz', sans-serif;
+font-size: 2rem;
+margin: 2rem;
+}
+.header p:hover{
+  color: var(--headerColor);
+  cursor: pointer;
+}
+
+.header>a{
+  font-family: 'Helvetica', sans-serif;
+  font-weight:bold;
+  margin-left:65rem;
+  font-size: 1rem;
+  color: black;
+}
+.header>a:hover{
+  color: var(--headerColor);
+}
+hr{
+  border: 1px solid hsla(228, 10%, 14%, 0.96);
+  box-shadow: 0 0.1rem 2rem hsla(228, 10%, 14%, 0.96);
+}
+  
+/*-----------------content------------------------*/
+.content{
+  color: hsla(228, 10%, 20%, 0.98);
+}
+.content>h3{
+  display: flex;
+  margin: 2rem auto;
+  justify-content: center;
+}
+.info{
+  display: flex;
+  gap: 0.1rem;
+  margin: 0.5rem 0 0;
+  justify-content: safe center;
+}
+.info>p{
+  margin-left: 2rem;
+  padding: 0.5rem 0.4rem 0.2;
+  border-bottom: 2px solid hsla(228, 91%, 14%, 0.42);
+}
+.info>p:hover{
+  border: none;
+  border-radius: 0.05rem;
+ /* border-bottom: 2px solid hsla(225, 91%, 28%, 0.65);*/
+  box-shadow: 0 0.3rem 0 hsla(228, 91%, 14%, 0.42);
+  transition: var(--transLink);
+  cursor: pointer;
+}
+#vis{
+  text-transform: capitalize;
+}
+
+body{
+  font-family: 'Helvetica',sans-serif;
+}
+
+
+/*------------------------map----------------------------*/
+#issMap {
+  margin: 2rem;
+  height: 28rem;
+  width: 95%;
+  border: none;
+  border-radius: 0.7rem 1rem;
+  box-shadow: 0.05rem 0.1rem 0.8rem #38424c;
+}
+.time #submitLookup{
+cursor: pointer;
+}
+
+.wrapper{
+  align-content: center;
+  text-align: center;
+}
+
+/*------------------Input---------------------------*/
+input{
+  background: hsla(212, 74%, 91%, 0.6);
+  width: 50rem;
+  margin: 0.5rem 0;
+  border: 1px solid black;
+  height: 2.5rem;
+  text-align: center;
+}
+
+#date_time{
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0 0.3rem #2e3038;
+  transition: var(--trans);
+}
+#date_time:hover{
+  background:hsla(212, 68%, 75%, 1);
+  cursor: pointer;
+}
+
+.time button{
+  height: 2.9em;
+  padding: 0.5rem;
+  border: none;
+  box-shadow: 0 0 0.3rem #2e3038;
+  border-radius: 0.5rem;
+  transition: var(--trans);
+  margin-left:1rem ;
+}
+.time button:hover{
+  cursor: pointer;
+  color: white ;
+  background-color: hsla(212, 74%, 45%, 0.8);
+}
+
+
+/*------------------------table----------------------*/
+ th, tr, td{
+  padding: 0.5rem;  
+  border: 1px solid #bbb;
+  border-collapse: collapse;
+  align-content: center;
+  text-align: center;
+  margin: 10rem;
+}
+tr:hover{
+  background: var(--backColor);
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+table{
+  border-radius: 2rem;
+  width:40rem;  
+  border-collapse: collapse;
+  align-content: center;
+  text-align: center;
+  margin: 2rem 0 3rem 21rem;
+}
+#special7{
+  background:hsla(19, 68%, 49%, 0.22) ;
+}
+
+/*---------------------------about---------------------------*/
+blockquote{
+  font-style: italic;
+  font-family: 'work sans',sans-serif ;
+  text-align: justify;
+  border: none;
+  border-radius: 0.5em;
+  padding:0 1em;
+  margin-bottom: 3rem;
+ text-align: center;
+}
+.about blockquote{
+  font-size: 1.2rem;
+  text-indent: 2rem;
+  line-height: 3.5rem;
+
+}
+
+strong{
+  font-style: normal;
+  color:hsl(0, 0%, 20%,1) ;
+}
+
+/*----------------------------footer-------------------------*/
+#myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 6.5rem; 
+  right: 2.5rem; 
+  z-index: 99; 
+  border: none; 
+  background-color: hsla(228, 99%, 58%, 1); 
+  color: white; 
+  cursor: pointer; 
+  padding: 0.5rem; 
+  border-radius: 0.5rem; 
+  font-size: 1rem; 
+}
+
+#myBtn:hover {
+  background-color: hsla(228, 99%, 39%, 1);
+}
+
+.footer{
+  display: flex;
+  max-width: 100%;
+  height: 6rem;
+  margin: 0;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  background: hsla(212, 15%, 8%, 0.78);
+}
+.footer>p{
+  color: white;
+  font-style: italic;
+  font-size: var(--footerFont);
+  cursor: pointer;
+}
+.footer p:hover{
+ color: hsla(212, 15%, 68%, 0.75);
+ transition: var(--transLink);
+}
+.footer a:hover{
+ color:hsla(212, 15%, 68%, 0.75);
+ transition: var(--transLink);
+}
+
+a{
+  text-decoration: none;
+  font-style: italic;
+  font-size: var(--footerFont);
+  color: white;
+}

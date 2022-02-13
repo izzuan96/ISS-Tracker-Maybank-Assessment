@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content=", initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="satellite.ico">
+    <!-- Using the Leaffet Library for mapping -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@600&display=swap" rel="stylesheet">
+
+    <title>Programme Assessment | Maybank</title>
+    </head>
+    <body>
+      <div class="header" id="myHeader">
+        <p>ASSESSMENT</p>
+        <a href="#wrapper">Track</a>
+      </div><hr>
+      <div class="content">
+        <h3>The International Space Station (ISS-25544)</h3>
+        <h3>Current Position</h3>
+        <div class="info">  
+          <p> Latitude: <span id="lat"></span>°</p><br />
+          <p> Longitude: <span id="lon"></span>°</p> <br />
+          <p> Speed: <span id="vel"></span> km/s </p><br />
+          <p> Visibility: <span id="vis"></span></p><br />
+          <p> Time:<span id="time"></span></p><br />
+        </div>
+      </div>
+
+      <div id="issMap"></div>
+
+      <!-- wrapper for iss location history -->
+      <div class="wrapper" id="wrapper">
+        <form>
+          <label>Enter Date and Time to see previous ISS's location </label>
+          <div class="time">
+            <input class="form-control" id="date_time" type="datetime-local" data-date-format="dd/mm/yyyy hh:mm" placeholder="22/12/2008 16:46">
+            <button id="input" type="button" onclick="submit(event);">Submit</button>
+          </div>
+        </form>
+
+      <div class="10class">
+          <table>
+            <tr>
+              <th>No</th>
+              <th>Date & Time</th>
+              <th>Location</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td id="1"></td>
+              <td id="loc1"></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td id="2"></td>
+              <td id="loc2"></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td id="3"></td>
+              <td id="loc3"></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td id="4"></td>
+              <td id="loc4"></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td id="5"></td>
+              <td id="loc5"></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td id="6" ></td>
+              <td id="loc6"></td>
+            </tr>
+            <tr id="special7">
+              <td>7</td>
+              <td id="7"></td>
+              <td id="loc7"></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td id="8"></td>
+              <td id="loc8"></td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td id="9"></td>
+              <td id="loc9"></td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td id="10"></td>
+              <td id="loc10"></td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td id="11"></td>
+              <td id="loc11"></td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td id="12"></td>
+              <td id="loc12"></td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td id="13"></td>
+              <td id="loc13"></td>
+            </tr>
+        </table>
+      </div>
+    </div>
+    <div class="about">
+      <blockquote><q>The ISS orbits<strong> 400 KM </strong> above the Earth at approximately <strong>29,000 km/h</strong>.<br> It is the third brightest object in our sky, making it possible to catch <br>a glimpse of the ISS from ground level.</q></blockquote>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <div class="footer">
+      <p>&copy; Izzuan Assessment 2022</p>
+      <a href="https://wheretheiss.at/w/developer" target="_blank">API</a>
+    </div>
+
+  <script src="ISS.js"></script>
+  </body>
+
+</html>
